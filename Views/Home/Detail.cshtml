@@ -1,0 +1,122 @@
+@model PizzaKing.Models.Pizza
+
+<section>
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark"
+         style="
+            background: url( @Model.ImageUrl ) no-repeat;
+            background-size: cover;
+        ">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic fw-bolder text-body-emphasis">@Model.Name</h1>
+            <p class="lead my-3 text-body-secondary">@Model.ShortDescription @Model.LongDescription</p>
+            <p class="lead mb-0"><a href="#" class="text-muted font-weight-bold">Continue reading...</a></p>
+        </div>
+    </div>
+    <div class="row g-5">
+        <div class="col-md-8" style="padding-top:40px;">
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">@Model.Name</h2>
+                <p class="lead my-3 text-body-secondary">@Model.ShortDescription</p>
+                <p class="lead my-3 text-body-secondary">@Model.LongDescription</p>
+                <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+                <p>
+                    比薩（Pizza），又稱比薩、匹薩、批薩、披薩、義大利餡餅，是一種發源於義大利的食品，在全球頗受歡迎。比薩的常見做法是用發酵的圓麵餅上面覆蓋番茄醬、起司、肉、蔬菜等其他配料，並由烤爐烤製而成。
+                    起司通常用馬蘇里拉乾酪，也有混用幾種奶酪的形式，包括帕馬森乾酪、羅馬奶酪（romano）、意大利鄉村軟酪（ricotta）或蒙特瑞·傑克乾酪（Monterey Jack）、馬蘇里拉奶酪等。 [1]
+                    全世界最長的披薩產自美國加州，長達1,930米，成為舌尖上的吉尼斯。
+                </p>
+                <hr>
+                <h2> 起源 </h2>
+                <blockquote class="blockquote">
+                    <p>誰發明pizza？</p>
+                </blockquote>
+                <p>「披薩」是一種由特殊的醬汁和餡料做成的具有義大利風味的食品，但其實這種食品已經超越語言與文化的障礙，成為全球通行的小吃，受到各國消費者的喜愛。但這種美食究竟源自於何時何地，卻無從考究。那麼到底是誰發明了披薩呢。</p>
+                <h3>講究</h3>
+                <ul>
+                    <li>★上等的比薩必須具備四個特質：新鮮餅皮、上等起司、起司、頂級比薩醬和新鮮的餡料。 </li>
+                    <li>★餅底一定要現做，麵粉一般選用指定品牌，春冬兩季用甲級小麥研磨而成的餅底會外層香脆、內層鬆軟。 </li>
+                    <li>★一般正宗的比薩會選用馬蘇里拉起司，這樣做出來的比薩容易拉絲，且口感醇厚。 </li>
+                    <li>★比薩醬鬚由鮮美番茄混合純天然香料秘製而成，具有風味濃鬱的特點。 </li>
+                </ul>
+                <p>所有餡料必須新鮮，且都建議使用上等品種，以確保品質。成品匹薩必須軟硬適中，即使將其如「皮夾似的」折疊起來，外層也不會破裂。這便成為鑑定匹薩手工優劣的重要依據一。</p>
+
+                <h2>制作方法</h2>
+                <p>先將秤好的麵粉加上配料和勻，然後在底盆上油，鋪上一層由鮮美番茄混合的風味濃鬱的比薩醬料，再撒上柔軟的乳酪，放上海鮮、意式香腸、加拿大醃肉、火腿、五香肉粒、青椒、菠蘿等新鮮餡料，最後放進烤爐在260℃下烘烤5至7分鐘。好了，一個美味的比薩出爐了，值得注意的是：出爐即食、風味最佳，千萬不要等到擱置時間長了再品嚐。比薩依大小一般分為三種尺寸：6吋(切成4塊)、9吋(切成6塊)、12吋(切成8塊)，依厚度分為厚薄兩種。</p>
+                <ol>
+                    <li>將奶粉、奶油放進麵粉中和好，醒2小時</li>
+                    <li>洋蔥洗淨切成圈，青椒洗淨切丁</li>
+                    <li>在烤盤上倒入少許油，將麵團放入盤中按成一個中間薄邊緣厚的圓餅，用牙籤均勻的在餅上紮滿小孔，然後鋪上番茄沙司和香蒜辣醬，加上洋蔥、青椒、蝦仁、乳酪絲</li>
+                    <li>將放好調味料的比薩放入微波爐10分鐘，再按（烤脆）鍵5分鐘後即可。 </li>
+                </ol>
+            </article>
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">Lorem ipsum</h4>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+                <div>
+                    <h4 class="fst-italic">Bonorum et Malorum</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">adipisci velit, sed quia non numquam</h6>
+                                    <small class="text-body-secondary">January 15, 2023</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">consectetur adipiscing elit</h6>
+                                    <small class="text-body-secondary">January 14, 2023</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">tempor incididunt ut labore</h6>
+                                    <small class="text-body-secondary">January 13, 2023</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Archives</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="#">March 2021</a></li>
+                        <li><a href="#">February 2021</a></li>
+                        <li><a href="#">January 2021</a></li>
+                        <li><a href="#">December 2020</a></li>
+                        <li><a href="#">November 2020</a></li>
+                        <li><a href="#">October 2020</a></li>
+                        <li><a href="#">September 2020</a></li>
+                        <li><a href="#">August 2020</a></li>
+                        <li><a href="#">July 2020</a></li>
+                        <li><a href="#">June 2020</a></li>
+                        <li><a href="#">May 2020</a></li>
+                        <li><a href="#">April 2020</a></li>
+                    </ol>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Elsewhere</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

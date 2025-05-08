@@ -1,0 +1,66 @@
+﻿@using PizzaKing.ViewModels
+
+@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center p-3 pd-md-4 mx-auto">
+    <h1 class="display-4 fw-nomal text-body-emphasis">我們的披薩</h1>
+    <p class="fs-5 text-body-secondary">
+        Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+    </p>
+</div>
+
+<section class="pizza-section">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        @foreach (var pizza in Model.PizzaList)
+        {
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">@pizza.Name</h4>
+                    </div>
+                    <img class="bd-placeholder-img card-img-top" height="225" src="@pizza.ImageUrl" alt="">
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$@pizza.Price<small class="text-body-secondary fw-light">/個</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>@pizza.ShortDescription</li>
+                            <li>@pizza.LongDescription</li>
+                            <li>庫存：@pizza.IsInStock</li>
+                        </ul>
+                        <div class="product-group-btn btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                            <a type="button" class="w-100 btn btn-lg btn-outline-primary"
+                                asp-controller="Home" asp-action="Detail" asp-route-id="@pizza.Id"
+                                >產品詳情</a>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-danger">放入購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="comment-section">
+    <div class="p-3 text-center">
+        <h1 class="display-4 text-body-emphasis">評價</h1>
+    </div>
+    <div class="row">
+        @foreach (var feedback in Model.FeedbackList)
+        {
+            <div class="col-lg-3">
+                <figure class="text-end">
+                    <blockquote class="blockquote">
+                        <p>@feedback.Comments</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        @feedback.Name at <cite title="Source Title">@feedback.CreateTimeUTC</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        }
+    </div>
+    <p class="comment-btn"><a class="btn btn-secondary" href="/feedback">留下評價</a></p>
+</section>
